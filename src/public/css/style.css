@@ -1,59 +1,96 @@
-:root {
-  --bg-color: #0b0604e4;
-  --text-color-gradient: linear-gradient(
-    to right,
-    rgb(149 144 252),
-    rgb(67 231 173),
-    rgb(226 212 92)
-  );
-
-  font-size: 62.5%;
-}
+@import url("./animation.css");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; /* WebKit  */
+  -moz-osx-font-smoothing: grayscale; /* Firefox */
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
-div {
-  display: grid;
+:root {
+  /* Variaveis no Css */
+
+  --background-color: #1e1e1e;
+  --background-section: #2d3436;
+  --button-color: #74b9ff;
+  font-size: 62.5%; /* tamanho da font calculado em 10px */
+}
+
+body {
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+
   background-image: url("../img/bg-dark.svg");
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
-  font-family: "Bebas Neue", cursive;
+  background-repeat: no-repeat;
 }
-#app {
-  display: grid;
-  justify-content: center;
-  align-self: center;
-  justify-self: center;
-}
-img {
-  justify-self: center;
-  height: 20rem;
-}
-
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2rem #eee600);
-}
-
-h1 {
-  font-size: 9rem;
-  background-image: var(--text-color-gradient);
-  background-clip: text;
-  color: transparent;
-
-  -webkit-background-clip: text;
-}
-
-#app::after {
-  content: "";
-  height: 8px;
-  width: 100%;
+main {
+  font-size: 1.6rem; /* calculo das fonts */
   display: flex;
-  background-image: var(--text-color-gradient);
-  border-radius: 0 0 4rem 4rem;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.welcome {
+  margin: 10rem auto;
+  background-color: var(--background-color);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 40rem;
+  height: 50rem;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 5.8rem;
+  letter-spacing: 8px;
+}
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+  width: 100%;
+}
+label {
+  font-size: 2.4rem;
+}
+
+input {
+  margin-top: 1rem;
+  padding: 12px 24px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--background-color);
+  border: 1px solid var(--button-color);
+  color: #f1f1f1;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  width: 100%;
+  margin: 2rem;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  color: var(--background-color);
+  background-color: var(--button-color);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: transparent;
+  color: var(--button-color);
+  border: 1px solid var(--button-color);
 }

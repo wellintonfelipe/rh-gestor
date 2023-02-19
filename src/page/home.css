@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; /* WebKit  */
+  -moz-osx-font-smoothing: grayscale; /* Firefox */
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+
+  border: 1px solid var(--button-color);
+}
+
+:root {
+  /* Variaveis no Css */
+
+  --background-color: #1e1e1e;
+  --background-section: #2d3436;
+  --button-color: #74b9ff;
+  font-size: 62.5%; /* tamanho da font calculado em 10px */
+}
+
+body {
+  color: #fff;
+
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../public/img/bg-dark.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  display: flex;
+  margin: 8rem 6em;
+  border-radius: 8px;
+}
+aside {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 13.2rem 3.9rem;
+}
+
+main aside button {
+  background-color: transparent;
+  cursor: pointer;
+}
+main aside img {
+  width: 4rem;
+  height: 4rem;
+}
+
+main section header {
+  display: flex;
+  width: 135rem;
+  height: 10rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--background-color);
+}
+
+main section header .information {
+  display: flex;
+  font-size: 2rem;
+  gap: 1rem;
+}
+main section header .information div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main section header .information div p {
+  display: inline;
+  width: 30rem;
+}
+
+main section header .information img {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+}

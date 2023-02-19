@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <!-- Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -11,27 +12,40 @@
       type="image/svg+xml"
       href="./src/public/img/javascript.svg"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Vite App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/public/css/style.css" />
+    <link rel="stylesheet" href="./src/public/css/animation.css" />
+
+    <title>RH -Gestor</title>
   </head>
 
   <body>
-    <header id="app">
-      <section class="welcome">
-        <h1>Welcome</h1>
-        <label for="email">E-mail</label>
-        <input type="text" name="email" id="email" />
-
-        <label for="password">Senha</label>
-        <input type="text" name="password" id="password" />
+    <main id="app">
+      <!-- Animation -->
+      <section class="animation">
+        <h1>RH - Gestor, seja bem vindo</h1>
       </section>
-    </header>
+
+      <!-- page Login -->
+      <section class="welcome">
+        <h2 class="title">Login</h2>
+        <div>
+          <label for="email">E-mail</label>
+          <input type="text" name="email" id="email" />
+        </div>
+
+        <div>
+          <label for="password">Senha</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <button type="submit">Entrar</button>
+      </section>
+    </main>
 
     <!-- <script type="module" src="/main.js"></script> -->
   </body>
