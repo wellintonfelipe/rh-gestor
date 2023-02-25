@@ -6,80 +6,116 @@
   -moz-osx-font-smoothing: grayscale; /* Firefox */
   overflow: hidden;
   font-family: "Poppins", sans-serif;
-
-  border: 1px solid var(--button-color);
 }
 
 :root {
-  /* Variaveis no Css */
+  /* Variáveis no Css */
 
   --background-color: #1e1e1e;
   --background-section: #2d3436;
   --button-color: #74b9ff;
+  --color-font: #ffff;
   font-size: 62.5%; /* tamanho da font calculado em 10px */
 }
 
 body {
-  color: #fff;
-
-  width: 100vw;
-  height: 100vh;
+  color: var(--color-font);
   background-image: url("../public/img/bg-dark.svg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 main {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  margin: 8rem 6em;
-  border-radius: 8px;
 }
+
 aside {
-  background-color: var(--background-color);
+  min-height: 100%;
+  padding: 3rem 2rem;
+  gap: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-  padding: 13.2rem 3.9rem;
+  justify-content: center;
+  background-color: var(--background-section);
+
+  opacity: 0.2;
+
+  /* border: 1px solid var(--button-color); */
+}
+
+main aside button > .logo {
+  width: 4.7rem;
+  height: 4.7rem;
+  margin-bottom: 30px !important;
+  opacity: 1;
 }
 
 main aside button {
-  background-color: transparent;
+  border: none;
   cursor: pointer;
-}
-main aside img {
-  width: 4rem;
-  height: 4rem;
+  background-color: transparent;
+  padding: 2rem 2rem;
+  transition: 2ms all;
 }
 
-main section header {
+main aside .link:hover {
+  background-color: var(--background-color);
+  border-radius: 8px;
+}
+main .nav-bar .link img {
+  width: 3rem;
+  height: 3rem;
+}
+/* estilo do Header */
+main header {
   display: flex;
-  width: 135rem;
+  width: 100%;
   height: 10rem;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--background-color);
+  /* border: 1px solid red; */
 }
 
-main section header .information {
+main header .information {
   display: flex;
   font-size: 2rem;
-  gap: 1rem;
+  gap: 2px;
 }
-main section header .information div {
+main header .information img {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+}
+
+main header .information div {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-main section header .information div p {
-  display: inline;
-  width: 30rem;
+main header .information div p {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
 }
 
-main section header .information img {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  border-radius: 50%;
+main header input {
+  width: 30rem;
+  height: 5.4rem;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid var(--button-color);
+  color: var(--color-font);
+  font-weight: bold;
+  padding: 1rem;
+}
+
+main header span {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
 }
